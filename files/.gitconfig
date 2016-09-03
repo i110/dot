@@ -1,0 +1,18 @@
+[alias]
+    br = branch
+    ci = commit
+    co = checkout
+    di = diff
+    sm = submodule
+    st = status
+    wt = worktree
+[user]
+	name = Ichito Nagata
+	email = i.nagata110@gmail.com
+[core]
+	editor = vim
+    excludesfile = ~/.gitignore
+[rebase]
+	autosquash = true
+[fetch]
+	prune = true
