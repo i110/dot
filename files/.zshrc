@@ -32,7 +32,7 @@ add_to_path "${HOME}/bin";
 
 # Aliases
 alias g="git"
-alias br="git rev-parse --abbrev-ref HEAD"
+alias cbr="git rev-parse --abbrev-ref HEAD"
 alias grep='grep -E --color=auto'
 alias ls="ls -altr";
 
