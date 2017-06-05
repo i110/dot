@@ -16,3 +16,9 @@
 	autosquash = true
 [fetch]
 	prune = true
+[diff "json"]
+    textconv = "perl -MJSON -0e \"print JSON->new->canonical->pretty->encode(decode_json(<>))\""
+[merge]
+	ff = false
+[pull]
+	ff = only
