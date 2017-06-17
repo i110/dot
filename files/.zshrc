@@ -1,8 +1,11 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=100000
-SAVEHIST=10000000
-setopt appendhistory extendedglob
+export HISTFILE=~/.histfile
+export HISTSIZE=10000
+export SAVEHIST=100000
+setopt EXTENDED_HISTORY
+setopt append_history
+setopt hist_expand
+setopt hist_no_store
 bindkey -v
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line

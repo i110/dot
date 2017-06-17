@@ -6,7 +6,7 @@ startup_message off
 autodetach on
 vbell off
 
-scrollback 100000
+defscrollback 100000
 
 escape ^e^e
 bind x
@@ -18,5 +18,5 @@ hardstatus alwayslastline "%H%=%Y/%m/%d %02c"
 shelltitle "$ |shell"
 defbce             on
 term               xterm-256color
-caption always '%{= bk} %-w%{=bu dr}%n %t%{-}%+w'
+caption always '%{= ck} %-w%{=bu dr}%n %t%{-}%+w'
 shell $SHELL
