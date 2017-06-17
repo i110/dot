@@ -12,11 +12,14 @@ escape ^e^e
 bind x
 bind ^x
 maptimeout 0
+bind N colon 'number '
 
 caption always "%-w%10L>%{=b bw}%n %t%{-}%+w%-0="
 hardstatus alwayslastline "%H%=%Y/%m/%d %02c"
 shelltitle "$ |shell"
 defbce             on
 term               xterm-256color
-caption always '%{= ck} %-w%{=bu dr}%n %t%{-}%+w'
+caption always "%{= bk} %-w%{=bu dr}%n %t%{-}%+w"
 shell $SHELL
+
+source ~/.screenrc.local
