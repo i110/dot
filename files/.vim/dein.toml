@@ -2,9 +2,6 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'Shougo/vimfiler.vim'
-
-[[plugins]]
 repo = 'Shougo/vimproc.vim'
 hook_post_update = '''
   if executable('gmake')
@@ -14,14 +11,3 @@ hook_post_update = '''
   endif
   let g:dein#plugin.build = cmd
 '''
-
-[[plugins]]
-repo = 'elzr/vim-json'
-# if   = '''! has('kaoriya')'''
-
-[[plugins]]
-repo   = 'Shougo/unite.vim'
-
-[[plugins]]
-repo      = 'Shougo/neomru.vim'
-on_source = ['unite.vim']
