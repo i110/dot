@@ -19,7 +19,7 @@ hardstatus alwayslastline "%H%=%Y/%m/%d %02c"
 shelltitle "$ |shell"
 defbce             on
 term               xterm-256color
-caption always "%{= bk} %-w%{=bu dr}%n %t%{-}%+w"
+caption always "%{= ck} %-w%{=bu dr}%n %t%{-}%+w"
+source $HOME/.screenrc.local
 shell $SHELL
 
-source ~/.screenrc.local
