@@ -1,3 +1,4 @@
+set autoread
 set nocompatible
 set nowritebackup
 set paste
@@ -8,6 +9,7 @@ autocmd BufNewFile,BufRead *.tx set filetype=html
 autocmd BufNewFile,BufRead *.as set filetype=actionscript
 autocmd BufNewFile,BufRead *.vue set filetype=html
 autocmd BufNewFile,BufRead *.go set filetype=go
+autocmd BufRead,BufNewFile *.vtc set filetype=vtc
 autocmd FileType * setlocal formatoptions-=ro
 autocmd FileType * set comments=
 
@@ -84,3 +86,15 @@ endif
 " ======== dein end
 
 filetype plugin indent on
+
+augroup vimrc-local
+  autocmd!
+  autocmd BufNewFile,BufReadPost * call s:vimrc_local(expand('<afile>:p:h'))
+augroup END
+
+function! s:vimrc_local(loc)
+  let files = findfile('.vimrc.local', escape(a:loc, ' ') . ';', -1)
+  for i in reverse(filter(files, 'filereadable(v:val)'))
+    source `=i`
+  endfor
+endfunction
