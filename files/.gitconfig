@@ -6,6 +6,7 @@
     sm = submodule
     st = status
     wt = worktree
+    cp = cherry-pick
 [user]
 	name = Ichito Nagata
 	email = i.nagata110@gmail.com
@@ -22,3 +23,8 @@
 	ff = false
 [pull]
 	ff = only
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
