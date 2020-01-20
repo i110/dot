@@ -21,18 +21,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# Path
-function add_to_path ()
-{
-    if [[ "$PATH" =~ (^|:)"${1}"(:|$) ]]
-    then
-        return 0
-    fi
-    export PATH=${1}:$PATH
-}
-add_to_path "/usr/local/bin";
-add_to_path "${HOME}/bin";
-
 # Aliases
 alias g="git"
 alias cbr="git rev-parse --abbrev-ref HEAD"
@@ -70,4 +58,4 @@ SPROMPT=$tmp_sprompt
   PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
 ;
 
-[ -f ~/.zshrc.include ] && source ~/.zshrc.include
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local

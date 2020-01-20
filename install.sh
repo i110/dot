@@ -14,6 +14,7 @@ function create_link () {
 create_link .vim
 create_link .vimrc
 create_link .zshrc
+create_link .zprofile
 create_link .gitconfig
 create_link .gitignore
 create_link .screenrc
