@@ -2,6 +2,7 @@ set autoread
 set nocompatible
 set nowritebackup
 set paste
+set hlsearch
 autocmd BufNewFile,BufRead *.t set filetype=perl
 autocmd BufNewFile,BufRead *.psgi set filetype=perl
 autocmd BufNewFile,BufRead *.tt set filetype=html
@@ -50,10 +51,12 @@ set showmatch
 set visualbell t_vb=
 set noerrorbells
 
-nnoremap <C-c> :! perl -Ilib -c %<Enter>
-nnoremap <C-h> :! perl -Ilib %<Enter>
-nnoremap <C-p> :! prove -It/lib -l %<Enter>
+"nnoremap <C-c> :! perl -Ilib -c %<Enter>
+"nnoremap <C-h> :! perl -Ilib %<Enter>
+"nnoremap <C-p> :! prove -It/lib -l %<Enter>
 inoremap <C-a> <c-x><c-o>
+nnoremap <C-j> :noh<Enter>
+nnoremap <C-i> :e<Enter>
 
 hi Pmenu ctermbg=magenta
 hi PmenuSel ctermbg=blue
