@@ -60,5 +60,9 @@ SPROMPT=$tmp_sprompt
   PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
 ;
 
+function tabname {
+  echo -ne "\033]0;"$*"\007"
+}
+
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 

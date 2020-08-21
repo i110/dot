@@ -11,5 +11,7 @@ suck*
 .proverc
 mine*
 .gitignore.local
+myfind
+.local
 .local.*
 *.local
