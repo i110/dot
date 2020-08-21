@@ -21,4 +21,4 @@ create_link .screenrc
 
 #### vim
 # install dein
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh | sh /dev/stdin ./.vim/dein
+# curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh | sh /dev/stdin ./.vim/dein
