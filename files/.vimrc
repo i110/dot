@@ -1,6 +1,8 @@
+set autoread
 set nocompatible
 set nowritebackup
 set paste
+"set clipboard=unnamed
 autocmd BufNewFile,BufRead *.t set filetype=perl
 autocmd BufNewFile,BufRead *.psgi set filetype=perl
 autocmd BufNewFile,BufRead *.tt set filetype=html
@@ -8,6 +10,7 @@ autocmd BufNewFile,BufRead *.tx set filetype=html
 autocmd BufNewFile,BufRead *.as set filetype=actionscript
 autocmd BufNewFile,BufRead *.vue set filetype=html
 autocmd BufNewFile,BufRead *.go set filetype=go
+autocmd BufNewFile,BufRead *.thor set filetype=ruby
 autocmd FileType * setlocal formatoptions-=ro
 autocmd FileType * set comments=
 
@@ -48,9 +51,23 @@ set showmatch
 set visualbell t_vb=
 set noerrorbells
 
-nnoremap <C-c> :! perl -Ilib -c %<Enter>
-nnoremap <C-h> :! perl -Ilib %<Enter>
-nnoremap <C-p> :! prove -It/lib -l %<Enter>
+" nnoremap <C-c> :! perl -Ilib -c %<Enter>
+" nnoremap <C-h> :! perl -Ilib %<Enter>
+" nnoremap <C-p> :! prove -It/lib -l %<Enter>
+nnoremap <C-k> :w<Enter>
+nnoremap <C-j> :! 
+nnoremap <C-p> <C-w>+
+" nnoremap <C-m>
+" nnoremap <C-n>
+" nnoremap <C-n>
+" nnoremap +
+autocmd BufEnter *.sh nnoremap <C-h> :! sh %<Enter>
+autocmd BufEnter *.pl nnoremap <C-h> :! perl -Ilib %<Enter>
+autocmd BufEnter *.rb nnoremap <C-h> :! ruby %<Enter>
+autocmd BufEnter *.go nnoremap <C-i> :! go fmt %<Enter>
+autocmd BufEnter *.go nnoremap <C-h> :! go run %<Enter>
+autocmd BufEnter *.rs nnoremap <C-i> :! rustfmt %<Enter>
+autocmd BufEnter *.rs nnoremap <C-h> :! cargo run<Enter>
 inoremap <C-a> <c-x><c-o>
 
 hi Pmenu ctermbg=magenta
