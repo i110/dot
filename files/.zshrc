@@ -1,3 +1,5 @@
+typeset -U path PATH
+
 # Lines configured by zsh-newuser-install
 export HISTFILE=~/.histfile
 export HISTSIZE=10000
@@ -59,3 +61,4 @@ SPROMPT=$tmp_sprompt
 ;
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
